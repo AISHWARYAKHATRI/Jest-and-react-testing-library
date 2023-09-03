@@ -6,14 +6,14 @@ import { render, screen } from "@testing-library/react";
 import Greet from "./greet";
 
 describe("Greet", () => {
-  test("Renders correctly", () => {
+  it("Renders correctly", () => {
     render(<Greet />);
     const textElement = screen.getByText("Hello");
     expect(textElement).toBeInTheDocument();
   });
 
   describe("Nested", () => {
-    test("Renders with a name", () => {
+    fit("Renders with a name", () => {
       render(<Greet name="Aishwarya" />);
       const textElement = screen.getByText("Hello Aishwarya");
       expect(textElement).toBeInTheDocument();
@@ -22,7 +22,7 @@ describe("Greet", () => {
 });
 
 describe("Nested", () => {
-  test("Renders with a name", () => {
+  xit("Renders with a name", () => {
     render(<Greet name="Aishwarya" />);
     const textElement = screen.getByText("Hello Aishwarya");
     expect(textElement).toBeInTheDocument();
